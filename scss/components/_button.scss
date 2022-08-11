@@ -1,0 +1,47 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    @include a-element-reset;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    border: 1px solid $color-blue-light;
+    margin: 1rem;
+    transition: $transition-btn;
+  }
+
+  &--blue {
+    background-color: $color-blue-light;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &:hover {
+    transform: scale(1.07) translateY(-3px);
+    box-shadow: $box-shadow-light;
+  }
+
+  &:active {
+    transform: scale(1.03) translateY(-1px);
+    box-shadow: $box-shadow-lighest;
+  }
+
+  &--blue:hover {
+    background-color: $color-black-light;
+    border: 1px solid $color-black-light;
+  }
+
+  &--transparent:hover {
+    background-color: $color-blue-light;
+  }
+  
+  &--animated {
+    animation: moveInBottom .75s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+
+

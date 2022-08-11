@@ -1,0 +1,59 @@
+.navbar {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: moveInLeft 1s ease-out;
+
+    img {
+        width: 93px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    animation: moveInRight 1s ease-out;
+  }
+
+  //&__item {}
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+        @include a-element-reset;
+        padding: 3rem 2rem;
+        color: $color-white;
+        transition: $transition-btn;
+    }
+
+    &:hover {
+        color: $color-blue-light;
+    }
+
+    &:active {
+        color: $color-white;
+    }
+    
+    &.active {
+        color: $color-blue-light;
+    }
+  }
+
+  //&__down {}
+
+  &--header {
+    align-self: stretch;
+    
+  }
+}

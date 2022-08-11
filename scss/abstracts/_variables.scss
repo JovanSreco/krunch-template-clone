@@ -1,0 +1,30 @@
+//COLORS
+$color-black-dark: #333;
+$color-black-light: #5c5c5c;
+
+$color-blue-dark: #0082f3;
+$color-blue-light: #4d8cf5;
+
+$color-white: #fff;
+$color-black: #000;
+$color-black-light: #222;
+$color-black-lightest: #333;
+
+/// FONTS
+$default-font-size: 1.6rem;
+
+// TEXT GUTTERS
+$text-gutter-small: 1rem;
+$text-gutter-medium: 2rem;
+$text-gutter-large: 3rem;
+
+//SECTION GUTTERS
+$section-gutter: 4.8rem;
+
+//BOX SHADOW
+$box-shadow-lighest: 0 .5rem 1rem rgba($color-black, .2);
+$box-shadow-light: 0 1rem 2rem rgba($color-black, .2);
+$box-shadow-medium: 0 2rem 4rem rgba($color-black, .2);
+
+// TRANSITIONS
+$transition-btn: all 300ms ease-in-out;

@@ -1,0 +1,11 @@
+.about-box {
+    display: flex;
+    
+    &__text {
+        flex: 0 1 50%;
+    }
+
+    &__image {
+        flex: 0 1 50%;
+    }
+}

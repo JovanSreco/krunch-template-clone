@@ -1,0 +1,18 @@
+@mixin background-color-clip {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-light
+  );
+  -webkit-background-clip: text; //background will web cliped just where the text is
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin a-element-reset {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  line-height: inherit;
+  cursor: pointer;
+}

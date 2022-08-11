@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  line-height: 2.2rem;
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.heading-primary {
+  font-family: "Karla", sans-serif;
+  font-size: 5.8rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-secondary {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.heading-secondary p {
+  font-style: italic;
+}
+.heading-secondary > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.heading-secondary__h2 {
+  font-family: "Karla", sans-serif;
+  color: #333;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.paragraph--header {
+  animation: moveInRight 1s ease-out;
+}
+
+.underline {
+  display: inline-block;
+  width: 72px;
+  height: 2px;
+  background-color: #4d8cf5;
+}
+
+.about-box {
+  display: flex;
+}
+.about-box__text {
+  flex: 0 1 50%;
+}
+.about-box__image {
+  flex: 0 1 50%;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  line-height: inherit;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  border: 1px solid #4d8cf5;
+  margin: 1rem;
+  transition: all 300ms ease-in-out;
+}
+.btn--blue {
+  background-color: #4d8cf5;
+}
+.btn--transparent {
+  background-color: transparent;
+}
+.btn:hover {
+  transform: scale(1.07) translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: scale(1.03) translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn--blue:hover {
+  background-color: #222;
+  border: 1px solid #222;
+}
+.btn--transparent:hover {
+  background-color: #4d8cf5;
+}
+.btn--animated {
+  animation: moveInBottom 0.75s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.container {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.container-layout1 {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.header {
+  height: 90vh;
+  padding: 3.2rem 1.5rem;
+  color: #fff;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/hero-medium.jpg);
+  background-position: top;
+  background-size: cover;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.header .container-layout1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__text-box {
+  max-width: 90rem;
+}
+.header__text-box > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.header__button-group {
+  margin-top: 4rem;
+}
+
+.navbar {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__logo {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moveInLeft 1s ease-out;
+}
+.navbar__logo img {
+  width: 93px;
+}
+.navbar__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  animation: moveInRight 1s ease-out;
+}
+.navbar__link, .navbar__link:link, .navbar__link:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  line-height: inherit;
+  cursor: pointer;
+  padding: 3rem 2rem;
+  color: #fff;
+  transition: all 300ms ease-in-out;
+}
+.navbar__link:hover {
+  color: #4d8cf5;
+}
+.navbar__link:active {
+  color: #fff;
+}
+.navbar__link.active {
+  color: #4d8cf5;
+}
+.navbar--header {
+  align-self: stretch;
+}
+
+section {
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+  padding: 0 1.5rem;
+}
