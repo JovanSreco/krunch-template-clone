@@ -6,6 +6,7 @@
     padding: 1rem 3rem;
     border-radius: 1rem;
     border: 1px solid $color-blue-light;
+    color: $color-white;
     margin: 1rem;
     transition: $transition-btn;
   }
@@ -29,8 +30,8 @@
   }
 
   &--blue:hover {
-    background-color: $color-black-light;
-    border: 1px solid $color-black-light;
+    background-color: $color-black-medium;
+    border: 1px solid $color-black-medium;
   }
 
   &--transparent:hover {

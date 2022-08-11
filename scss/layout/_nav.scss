@@ -6,9 +6,7 @@
 
   &__logo {
     display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
 
     animation: moveInLeft 1s ease-out;
 
