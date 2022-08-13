@@ -1,0 +1,18 @@
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    grid-gap: 4rem;
+    align-items: start;
+
+    &__svg {
+        fill: $color-blue-light;
+        height: 3.6rem;
+        width: 3.6rem;
+    }
+
+    &__card {
+        & > *:not(:last-child) {
+            margin-bottom: $text-gutter-medium;
+        }
+    }
+}

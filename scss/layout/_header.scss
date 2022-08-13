@@ -1,38 +1,35 @@
-
 .header {
-    padding: 3.2rem 1.5rem;
-    color: $color-white;
-    grid-column: full-start / full-end ;
-    
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-black, 0.75),
-        rgba($color-black, 0.75)
+  padding: 3.2rem 1.5rem;
+  color: $color-white;
+  grid-column: full-start / full-end;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-black, 0.75),
+      rgba($color-black, 0.75)
     ),
     url(../img/hero-medium.jpg);
-    background-position: top;
-    background-size: cover;
-    text-align: center;
-    box-shadow: $box-shadow-light;
+  background-position: top;
+  background-size: cover;
+  text-align: center;
+  box-shadow: $box-shadow-light;
 
-    .content-wrapper {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__text-box {
-        max-width: 90rem;
-        & > *:not(:last-child) {
-          margin-bottom: $text-gutter-large;
-        }
+  &__text-box {
+    max-width: 90rem;
+    & > *:not(:last-child) {
+      margin-bottom: $text-gutter-large;
     }
+  }
 
-    &__button-group {
-        margin-top: 4rem;
-    }
+  &__button-group {
+    margin-top: 4rem;
+  }
 }
-
-

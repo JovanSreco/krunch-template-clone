@@ -1,0 +1,70 @@
+.overlay {
+  position: relative;
+  max-width: 100%;
+  align-items: center;
+
+  &__img {
+    display: block;
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color-blue-light, 0.75);
+    opacity: 0;
+    z-index: 1;
+    transition: $transition-secondary;
+    @include flex-center;
+  }
+
+  &__content {
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: $transition-secondary;
+    transition-delay: 100ms;
+    display: flex;
+    & > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    h3 {
+      color: $color-white;
+      text-shadow: 0 1px 0 #000;
+    }
+  }
+
+  &__svg-wrapper {
+    @include a-element-reset;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: $color-black-medium;
+    transition: $transition-secondary;
+    @include flex-center;
+  }
+
+  &__svg {
+    fill: $color-white;
+    width: 50%;
+    height: 50%;
+    transition: $transition-main;
+  }
+
+  &:hover &__background {
+    opacity: 1;
+  }
+
+  &:hover &__content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__svg-wrapper:hover {
+    background-color: $color-white;
+  }
+
+  &__svg-wrapper:hover &__svg {
+    fill: $color-blue-light;
+  }
+}

@@ -22,9 +22,10 @@ $text-gutter-large: 3rem;
 $section-gutter: 4.8rem;
 
 //BOX SHADOW
-$box-shadow-lighest: 0 .5rem 1rem rgba($color-black, .2);
-$box-shadow-light: 0 1rem 2rem rgba($color-black, .2);
-$box-shadow-medium: 0 2rem 4rem rgba($color-black, .2);
+$box-shadow-lighest: 0 0.5rem 1rem rgba($color-black, 0.2);
+$box-shadow-light: 0 1rem 2rem rgba($color-black, 0.2);
+$box-shadow-medium: 0 2rem 4rem rgba($color-black, 0.2);
 
 // TRANSITIONS
-$transition-btn: all 300ms ease-in-out;
+$transition-main: all 300ms ease-in-out;
+$transition-secondary: all 500ms ease-out;

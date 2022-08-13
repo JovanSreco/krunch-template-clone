@@ -1,0 +1,24 @@
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__card {
+    display: block;
+    flex: 0 0 25%;
+  }
+
+  @include respond(tab-port) {
+    &__card {
+      flex: 0 0 50%;
+    }
+  }
+
+  @include respond(phone) {
+    &__card {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__button-group {
+  }
+}

@@ -1,11 +1,8 @@
 .head-secondary-group {
-    text-align: center;
-    margin-bottom: 4rem;
-    p {
-      font-style: italic;
-    }
-  
-    & > *:not(:last-child) {
-      margin-bottom: $text-gutter-medium;
-    }
+  text-align: center;
+  margin-bottom: 4rem;
+
+  & > *:not(:last-child) {
+    margin-bottom: $text-gutter-medium;
   }
+}

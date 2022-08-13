@@ -16,18 +16,37 @@
               <img src="img/logo.png" alt="logo" />
             </a>
             <ul class="navbar__list">
-              <li class="navbar__item"><a href="#" class="navbar__link active">Home</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">About</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">Portfolio</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">Services</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">Team</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">Blog</a></li>
-              <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link active">Home</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">About</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Portfolio</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Services</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Team</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Blog</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link">Contact</a>
+              </li>
             </ul>
           </nav>
           <div class="header__text-box">
             <h1 class="heading-primary">Krunch | Template Clone</h1>
-            <p class="paragraph paragraph--header">Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.&nbsp;</p>
+            <p class="paragraph paragraph--header">
+              Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+              Nunc ut sem vitae risus tristique posuere. Duis cursus, mi quis
+              viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+              vitae erat.&nbsp;
+            </p>
             <div class="header__button-group">
               <a class="btn btn--blue btn--animated">Download now</a>
               <a class="btn btn--transparent btn--animated">View features</a>
@@ -36,36 +55,208 @@
           <div class="header__down">something</div>
         </div>
       </header>
-  
+
       <section class="section section-about section--thin">
         <div class="head-secondary-group">
           <h2 class="heading-secondary">About us</h2>
-          <p class="paragraph">Setibulum rutrum quam vitae fringilla tincidunt</p>
+          <p class="paragraph">
+            Setibulum rutrum quam vitae fringilla tincidunt
+          </p>
           <div class="underline"></div>
         </div>
         <div class="about-box">
           <div class="about-box__text">
-            <p class="paragrah">Lorem ipsum dolor sitamet, consectetur adipisicing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisus nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class="paragrah">Excepteur sint occaecat cupidatat none proident, sunt in culpa qui officia deserunt mollit anim id est laborum voluptate dolor.</p>
+            <p class="paragrah">
+              Lorem ipsum dolor sitamet, consectetur adipisicing elit, seddo
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quisus nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="paragrah">
+              Excepteur sint occaecat cupidatat none proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum voluptate dolor.
+            </p>
           </div>
           <div class="about-box__image">
-            <img src="./img/home-about.jpg" alt="Cup with pencils and glasses on a table">
+            <img
+              src="./img/home-about.jpg"
+              alt="Cup with pencils and glasses on a table"
+            />
           </div>
         </div>
       </section>
-  
-      <section class="section section-portfolio section--thin">
+
+      <section class="section section-portfolio section--wide">
         <div class="head-secondary-group">
           <h2 class="heading-secondary">Portfolio</h2>
-          <p class="paragraph">Setibulum rutrum quam vitae fringilla tincidunt</p>
+          <p class="paragraph">
+            Setibulum rutrum quam vitae fringilla tincidunt
+          </p>
           <div class="underline"></div>
         </div>
+        <div class="portfolio">
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-1-medium.jpg"
+                srcset="
+                  img/portfolio-1-small.jpg  500w,
+                  img/portfolio-1-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">Graphic Design</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-2-medium.jpg"
+                srcset="
+                  img/portfolio-2-small.jpg  500w,
+                  img/portfolio-2-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">Print Design</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-2-medium.jpg"
+                srcset="
+                  img/portfolio-3-small.jpg  500w,
+                  img/portfolio-3-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">Mobile Apps</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-2-medium.jpg"
+                srcset="
+                  img/portfolio-4-small.jpg  500w,
+                  img/portfolio-4-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">3D Drawing</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-2-medium.jpg"
+                srcset="
+                  img/portfolio-5-small.jpg  500w,
+                  img/portfolio-5-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">Interior Design</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-2-medium.jpg"
+                srcset="
+                  img/portfolio-6-small.jpg  500w,
+                  img/portfolio-6-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">Web Design</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-2-medium.jpg"
+                srcset="
+                  img/portfolio-7-small.jpg  500w,
+                  img/portfolio-7-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">Graphic Design</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/portfolio-2-medium.jpg"
+                srcset="
+                  img/portfolio-8-small.jpg  500w,
+                  img/portfolio-8-medium.jpg 800w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <h3 class="heading-tertiary">Home Design</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="btn-component">
+            <p class="paragraph">Have a Project in Mind?</p>
+            <a class="btn btn--transparent" href="#">Contact Now</a>
+          </div>
+        </div>
       </section>
-  
+
       <section class="section section-services section--thin">
         <div class="head-secondary-group">
           <h2 class="heading-secondary">Services</h2>
-          <p class="paragraph">Setibulum rutrum quam vitae fringilla tincidunt</p>
+          <p class="paragraph">
+            Setibulum rutrum quam vitae fringilla tincidunt
+          </p>
           <div class="underline"></div>
         </div>
         <div class="services">
@@ -73,80 +264,251 @@
             <svg class="services__svg">
               <use xlink:href="./img/icons/sprite.svg#icon-display"></use>
             </svg>
-            <h3 class="heading-tertiary">WEB DESIGN</h3>
+            <h3 class="heading-tertiary">Web Design</h3>
             <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim eros elementum tristique. Duis cursus, viverra ornare, eros dolor interdum nulla, commodo diam libero vitae.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim eros elementum tristique. Duis cursus,
+              viverra ornare, eros dolor interdum nulla, commodo diam libero
+              vitae.
             </p>
           </div>
           <div class="services__card">
             <svg class="services__svg">
               <use xlink:href="./img/icons/sprite.svg#icon-code"></use>
             </svg>
-            <h3 class="heading-tertiary">WEB DESIGN</h3>
+            <h3 class="heading-tertiary">Coding</h3>
             <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim eros elementum tristique. Duis cursus, viverra ornare, eros dolor interdum nulla, commodo diam libero vitae.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim eros elementum tristique. Duis cursus,
+              viverra ornare, eros dolor interdum nulla, commodo diam libero
+              vitae.
             </p>
           </div>
           <div class="services__card">
             <svg class="services__svg" class="icon-android">
               <use xlink:href="./img/icons/sprite.svg#icon-display"></use>
             </svg>
-            <h3 class="heading-tertiary">WEB DESIGN</h3>
+            <h3 class="heading-tertiary">Apps Design</h3>
             <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim eros elementum tristique. Duis cursus, viverra ornare, eros dolor interdum nulla, commodo diam libero vitae.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim eros elementum tristique. Duis cursus,
+              viverra ornare, eros dolor interdum nulla, commodo diam libero
+              vitae.
             </p>
           </div>
           <div class="services__card">
             <svg class="services__svg">
               <use xlink:href="./img/icons/sprite.svg#icon-camera"></use>
             </svg>
-            <h3 class="heading-tertiary">WEB DESIGN</h3>
+            <h3 class="heading-tertiary">Photography</h3>
             <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim eros elementum tristique. Duis cursus, viverra ornare, eros dolor interdum nulla, commodo diam libero vitae.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim eros elementum tristique. Duis cursus,
+              viverra ornare, eros dolor interdum nulla, commodo diam libero
+              vitae.
             </p>
           </div>
           <div class="services__card">
             <svg class="services__svg">
               <use xlink:href="./img/icons/sprite.svg#icon-magic-wand"></use>
             </svg>
-            <h3 class="heading-tertiary">WEB DESIGN</h3>
+            <h3 class="heading-tertiary">Branding</h3>
             <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim eros elementum tristique. Duis cursus, viverra ornare, eros dolor interdum nulla, commodo diam libero vitae.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim eros elementum tristique. Duis cursus,
+              viverra ornare, eros dolor interdum nulla, commodo diam libero
+              vitae.
             </p>
           </div>
           <div class="services__card">
             <svg class="services__svg">
               <use xlink:href="./img/icons/sprite.svg#icon-world"></use>
             </svg>
-            <h3 class="heading-tertiary">WEB DESIGN</h3>
+            <h3 class="heading-tertiary">Hosting</h3>
             <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim eros elementum tristique. Duis cursus, viverra ornare, eros dolor interdum nulla, commodo diam libero vitae.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim eros elementum tristique. Duis cursus,
+              viverra ornare, eros dolor interdum nulla, commodo diam libero
+              vitae.
             </p>
           </div>
         </div>
       </section>
-  
+
       <section class="section section-team section--thin">
         <div class="head-secondary-group">
           <h2 class="heading-secondary">Team</h2>
-          <p class="paragraph">Setibulum rutrum quam vitae fringilla tincidunt</p>
+          <p class="paragraph">
+            Setibulum rutrum quam vitae fringilla tincidunt
+          </p>
           <div class="underline"></div>
         </div>
+        <div class="team">
+          <div class="team__card">
+            <div class="overlay">
+              <img
+                class="overlay__img"
+                src="img/team-1.jpg"
+                alt="Man with a camera"
+              />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h4 class="heading-quartary">Michael Thomas</h4>
+            <p class="paragrah">Graphic Designer</p>
+          </div>
+          <div class="team__card">
+            <div class="overlay">
+              <img class="overlay__img" src="img/team-2.jpg" alt="A Woman" />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h4 class="heading-quartary">Alexa Meyer</h4>
+            <p class="paragrah">Web Developer</p>
+          </div>
+          <div class="team__card">
+            <div class="overlay">
+              <img class="overlay__img" src="img/team-3.jpg" alt="A Man" />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h4 class="heading-quartary">Jeffrey Steward</h4>
+            <p class="paragrah">Web Designer</p>
+          </div>
+          <div class="team__card">
+            <div class="overlay">
+              <img class="overlay__img" src="img/team-4.jpg" alt="A Man" />
+              <div class="overlay__background">
+                <div class="overlay__content">
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="overlay__svg-wrapper">
+                    <svg class="overlay__svg">
+                      <use
+                        xlink:href="./img/icons/sprite.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h4 class="heading-quartary">Bruce Moore</h4>
+            <p class="paragrah">Creative Director</p>
+          </div>
+        </div>
       </section>
-  
+
       <section class="section section-news section--thin">
         <div class="head-secondary-group">
           <h2 class="heading-secondary">Latest news</h2>
-          <p class="paragraph">Setibulum rutrum quam vitae fringilla tincidunt</p>
+          <p class="paragraph">
+            Setibulum rutrum quam vitae fringilla tincidunt
+          </p>
           <div class="underline"></div>
         </div>
+
+        <div class="content-wrapper">
+          <div class="btn-component">
+            <p class="paragraph">Have a Project in Mind?</p>
+            <a class="btn btn--transparent" href="#">Read Our Blog</a>
+          </div>
+        </div>
       </section>
-  
+
       <section class="section section-cta section--thin">
         <div class="head-secondary-group">
           <h2 class="heading-secondary">Keep in touch</h2>
-          <p class="paragraph">Setibulum rutrum quam vitae fringilla tincidunt</p>
+          <p class="paragraph">
+            Setibulum rutrum quam vitae fringilla tincidunt
+          </p>
           <div class="underline"></div>
+        </div>
+        <div class="content-wrapper">
+          <div class="btn-component">
+            <p class="paragraph">Have a Project in Mind?</p>
+            <a class="btn btn--blue" href="#">Send Message</a>
+          </div>
         </div>
       </section>
     </div>

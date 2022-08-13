@@ -1,14 +1,13 @@
 .section {
-    padding: 0 1.5rem;
+  padding: 0 1.5rem;
 
-    &--thin {
-        grid-column: center-start / center-end;
-        margin-top: $section-gutter;
-    }
-}
+  &--thin {
+    grid-column: center-start / center-end;
+    margin-top: $section-gutter;
+  }
 
-.content-wrapper {
-    width: 100%;
-    max-width: 120rem;
-    margin: 0 auto;
+  &--wide {
+    grid-column: full-start / full-end;
+    padding: 0;
+  }
 }

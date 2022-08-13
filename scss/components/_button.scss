@@ -8,7 +8,7 @@
     border: 1px solid $color-blue-light;
     color: $color-white;
     margin: 1rem;
-    transition: $transition-btn;
+    transition: $transition-main;
   }
 
   &--blue {
@@ -37,12 +37,25 @@
   &--transparent:hover {
     background-color: $color-blue-light;
   }
-  
+
   &--animated {
-    animation: moveInBottom .75s ease-out .75s;
+    animation: moveInBottom 0.75s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
 }
 
+.btn-component {
+  padding: 3.5rem;
+  text-align: center;
 
+  & > *:not(:last-child) {
+    margin-bottom: $text-gutter-large;
+  }
 
+  .btn--transparent {
+    color: $color-black;
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

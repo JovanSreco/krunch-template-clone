@@ -11,7 +11,7 @@
     animation: moveInLeft 1s ease-out;
 
     img {
-        width: 93px;
+      width: 93px;
     }
   }
 
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+
     animation: moveInRight 1s ease-out;
   }
 
@@ -29,22 +29,22 @@
     &,
     &:link,
     &:visited {
-        @include a-element-reset;
-        padding: 3rem 2rem;
-        color: $color-white;
-        transition: $transition-btn;
+      @include a-element-reset;
+      padding: 3rem 2rem;
+      color: $color-white;
+      transition: $transition-main;
     }
 
     &:hover {
-        color: $color-blue-light;
+      color: $color-blue-light;
     }
 
     &:active {
-        color: $color-white;
+      color: $color-white;
     }
-    
+
     &.active {
-        color: $color-blue-light;
+      color: $color-blue-light;
     }
   }
 
@@ -52,6 +52,5 @@
 
   &--header {
     align-self: stretch;
-    
   }
 }
