@@ -1,6 +1,97 @@
+// Blue line element
 .underline {
   display: inline-block;
   width: 72px;
   height: 2px;
   background-color: $color-blue-light;
+}
+
+.img-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+//Text align center
+.align-center {
+  text-align: center;
+}
+
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-end-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+//Padding small
+.p-sm {
+  padding: $gutter-small-medium;
+}
+
+//Padding Larger
+.p-lgt {
+  padding: $gutter-largest;
+}
+
+//Margin Extra Large
+.mb-elg {
+  margin-bottom: $gutter-extra-large;
+}
+
+//Child Margin Right Extra Small
+.cmr-esm {
+  & > *:not(:last-child) {
+    margin-right: $gutter-extra-small;
+  }
+}
+//Child Margin Right Small
+.cmr-sm {
+  & > *:not(:last-child) {
+    margin-right: $gutter-small;
+  }
+}
+//Child Margin Right medium
+.cmr-m {
+  & > *:not(:last-child) {
+    margin-right: $gutter-medium;
+  }
+}
+
+.cmr-lg {
+  & > *:not(:last-child) {
+    margin-right: $gutter-large;
+  }
+}
+
+//Child Margin Right
+.cmb-sm {
+  & > *:not(:last-child) {
+    margin-bottom: $gutter-small;
+  }
+}
+
+//Child Margin Bottom Small-Medium
+.cmb-smm {
+  & > *:not(:last-child) {
+    margin-bottom: $gutter-small-medium;
+  }
+}
+//Child Margin Bottom Medium
+.cmb-m {
+  & > *:not(:last-child) {
+    margin-bottom: $gutter-medium;
+  }
+}
+//Child Margin Bottom Large
+.cmb-lg {
+  & > *:not(:last-child) {
+    margin-bottom: $gutter-large;
+  }
 }

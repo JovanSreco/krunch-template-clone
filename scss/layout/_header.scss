@@ -2,17 +2,18 @@
   padding: 3.2rem 1.5rem;
   color: $color-white;
   grid-column: full-start / full-end;
+  box-shadow: $box-shadow-medium;
+  @include align-center;
 
   background-image: linear-gradient(
       to right bottom,
       rgba($color-black, 0.75),
       rgba($color-black, 0.75)
     ),
-    url(../img/hero-medium.jpg);
-  background-position: top;
-  background-size: cover;
-  text-align: center;
-  box-shadow: $box-shadow-light;
+    url(../img/hero.jpg);
+  background-position: 0px 0px, center;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
 
   .content-wrapper {
     height: 100%;
@@ -24,9 +25,6 @@
 
   &__text-box {
     max-width: 90rem;
-    & > *:not(:last-child) {
-      margin-bottom: $text-gutter-large;
-    }
   }
 
   &__button-group {

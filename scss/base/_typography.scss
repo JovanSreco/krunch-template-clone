@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.2rem;
   line-height: 2.2rem;
-  color: $color-black-dark;
+  color: $color-black-light;
   font-size: $default-font-size;
 }
 
@@ -32,6 +32,9 @@ body {
   @extend %heading;
   font-size: 2rem;
   line-height: 2.8rem;
+  &--transform-initial {
+    text-transform: initial;
+  }
 }
 
 .heading-quartary {
@@ -52,5 +55,23 @@ body {
     color: $color-white;
     font-size: 1.8rem;
     line-height: 2.8rem;
+  }
+
+  &--news {
+    color: $color-grey-medium;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  &--style-normal {
+    font-style: initial;
+  }
+
+  &--footer {
+    font-style: normal;
+    font-size: 1.3rem;
+    color: $color-grey;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }

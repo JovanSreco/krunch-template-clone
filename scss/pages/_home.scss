@@ -3,11 +3,26 @@
 
   &--thin {
     grid-column: center-start / center-end;
-    margin-top: $section-gutter;
+    margin-top: $section-gutter-lg;
   }
 
   &--wide {
     grid-column: full-start / full-end;
     padding: 0;
+    padding-top: $section-gutter-lg;
   }
+}
+
+.section-testimonials {
+  @include align-center;
+  box-shadow: $box-shadow-medium;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-black, 0.75),
+      rgba($color-black, 0.75)
+    ),
+    url(../img/testimonials-bg.jpg);
+  background-position: 0px 0px, center;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
 }

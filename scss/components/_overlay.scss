@@ -4,7 +4,7 @@
   align-items: center;
 
   &__img {
-    display: block;
+    @include img-style;
   }
 
   &__background {
@@ -16,7 +16,7 @@
     opacity: 0;
     z-index: 1;
     transition: $transition-secondary;
-    @include flex-center;
+    @include flex-center-center;
   }
 
   &__content {
@@ -25,9 +25,6 @@
     transition: $transition-secondary;
     transition-delay: 100ms;
     display: flex;
-    & > *:not(:last-child) {
-      margin-right: 1rem;
-    }
 
     h3 {
       color: $color-white;
@@ -35,17 +32,18 @@
     }
   }
 
-  &__svg-wrapper {
+  &__link {
     @include a-element-reset;
     width: 3.2rem;
     height: 3.2rem;
     background-color: $color-black-medium;
+    color: $color-white;
     transition: $transition-secondary;
-    @include flex-center;
+    @include flex-center-center;
   }
 
   &__svg {
-    fill: $color-white;
+    fill: currentColor;
     width: 50%;
     height: 50%;
     transition: $transition-main;
@@ -60,11 +58,11 @@
     transform: translateY(0);
   }
 
-  &__svg-wrapper:hover {
+  &__link:hover {
     background-color: $color-white;
   }
 
-  &__svg-wrapper:hover &__svg {
+  &__link:hover &__svg {
     fill: $color-blue-light;
   }
 }

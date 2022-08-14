@@ -16,12 +16,22 @@
   cursor: pointer;
 }
 
-@mixin flex-center {
+@mixin flex-center-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@mixin align-center {
+  text-align: center;
+}
+
+@mixin img-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

@@ -11,14 +11,6 @@
     transition: $transition-main;
   }
 
-  &--blue {
-    background-color: $color-blue-light;
-  }
-
-  &--transparent {
-    background-color: transparent;
-  }
-
   &:hover {
     transform: scale(1.07) translateY(-3px);
     box-shadow: $box-shadow-light;
@@ -29,33 +21,88 @@
     box-shadow: $box-shadow-lighest;
   }
 
-  &--blue:hover {
-    background-color: $color-black-medium;
-    border: 1px solid $color-black-medium;
-  }
-
-  &--transparent:hover {
-    background-color: $color-blue-light;
-  }
-
   &--animated {
     animation: moveInBottom 0.75s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
-}
 
-.btn-component {
-  padding: 3.5rem;
-  text-align: center;
-
-  & > *:not(:last-child) {
-    margin-bottom: $text-gutter-large;
+  &--blue {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-blue-light;
+    }
+    &:hover {
+      background-color: $color-black-medium;
+      border: 1px solid $color-black-medium;
+    }
   }
 
-  .btn--transparent {
-    color: $color-black;
+  &--transparent {
+    &,
+    &:link,
+    &:visited {
+      background-color: transparent;
+    }
+    &:hover {
+      background-color: $color-blue-light;
+    }
+  }
+
+  &--color-black {
+    &,
+    &:link,
+    &:visited {
+      color: $color-black-light;
+    }
+
     &:hover {
       color: $color-white;
     }
+  }
+
+  &--submit {
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-size: inherit;
+  }
+}
+
+.btn-readmore {
+  &,
+  &:link,
+  &:visited {
+    @include a-element-reset;
+    color: $color-blue-light;
+    transition: $transition-main;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    color: $color-blue-light;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: $transition-main;
+  }
+
+  // &__svg-wrapper {}
+
+  &__svg {
+    fill: $color-blue-light;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: $transition-main;
+  }
+
+  &:hover &__text {
+    color: $color-black;
+    margin-right: 2rem;
+  }
+
+  &:hover &__svg {
+    fill: $color-black;
   }
 }

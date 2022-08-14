@@ -1,0 +1,46 @@
+.footer {
+  grid-column: full-start / full-end;
+  padding: 2.2rem 0;
+  @include align-center;
+  background-color: $color-black-medium;
+
+  &__links {
+    padding: 1.5rem;
+    @include flex-center-center;
+  }
+
+  &__link {
+    @include a-element-reset;
+    width: 4.6rem;
+    height: 4.6rem;
+    color: white;
+    @include flex-center-center;
+
+    &:hover {
+      color: $color-blue-dark;
+    }
+  }
+
+  &__svg {
+    width: 75%;
+    height: 75%;
+    fill: currentColor;
+    transition: $transition-main;
+  }
+
+  &__copyright-link {
+    &,
+    &:link,
+    &:visited {
+      @include a-element-reset;
+      color: $color-blue-light;
+      transition: $transition-main;
+    }
+
+    &:hover {
+      color: $color-black;
+    }
+
+    // &:active {}
+  }
+}
