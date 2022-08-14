@@ -1,9 +1,13 @@
-// Blue line element
+// Blue line element or white line element
 .underline {
   display: inline-block;
   width: 72px;
   height: 2px;
   background-color: $color-blue-light;
+
+  &--white {
+    color: $color-white;
+  }
 }
 
 .img-style {
@@ -16,6 +20,14 @@
 //Text align center
 .align-center {
   text-align: center;
+}
+
+.color-white {
+  color: $color-white;
+}
+
+.bg-color-white {
+  background-color: $color-white;
 }
 
 .flex-center-center {
@@ -35,13 +47,17 @@
   padding: $gutter-small-medium;
 }
 
-//Padding Larger
+//Padding Largest
 .p-lgt {
   padding: $gutter-largest;
 }
 
-//Margin Extra Large
-.mb-elg {
+//Margin Top Medium
+.mt-m {
+  margin-top: 2rem;
+}
+//Margin Bottom Extra Large
+.mb-xlg {
   margin-bottom: $gutter-extra-large;
 }
 

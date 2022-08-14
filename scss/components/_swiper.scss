@@ -1,0 +1,24 @@
+.swiper {
+  margin: 0 auto;
+  height: 240px;
+  width: 80%;
+  margin-bottom: $gutter-extra-large;
+
+  @include respond(tab-port) {
+    height: 280px;
+  }
+
+  @include respond(phone) {
+    height: 340px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px !important;
+    height: 15px !important;
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: white !important;
+  }
+}

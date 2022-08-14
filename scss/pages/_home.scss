@@ -8,20 +8,33 @@
 
   &--wide {
     grid-column: full-start / full-end;
-    padding: 0;
-    padding-top: $section-gutter-lg;
+    padding: $section-gutter-lg 0;
   }
 }
 
 .section-testimonials {
   @include align-center;
-  box-shadow: $box-shadow-medium;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-black, 0.75),
       rgba($color-black, 0.75)
     ),
     url(../img/testimonials-bg.jpg);
+  box-shadow: $box-shadow-medium;
+  background-position: 0px 0px, center;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+}
+
+.section-video {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-black, 0.75),
+      rgba($color-black, 0.75)
+    ),
+    url(../img/video-bg.jpg);
+  box-shadow: $box-shadow-medium;
+  @include align-center;
   background-position: 0px 0px, center;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
