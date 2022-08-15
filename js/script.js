@@ -1,8 +1,6 @@
-// import Swiper bundle with all modules installed
+// *** SWIPER JS ***
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
-
-// import styles bundle
-
+// SWIPER JS
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   loop: true,
@@ -14,22 +12,53 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const btn = document.querySelector(".switch-btn");
-const video = document.querySelector(".video-container");
+// *** VIDEO LOGIC ***
+const video = document.querySelector("[data-video-container]");
+const videoPlay = document.querySelector("[data-video-play]");
+const videoPause = document.querySelector("[data-video-pause]");
 
-btn.addEventListener("click", function () {
-  if (!btn.classList.contains("slide")) {
-    btn.classList.add("slide");
-    video.pause();
+videoPlay.addEventListener("click", () => {
+  videoPlay.classList.remove("active");
+  videoPause.classList.add("active");
+  video.play();
+});
+
+videoPause.addEventListener("click", () => {
+  videoPause.classList.remove("active");
+  videoPlay.classList.add("active");
+  video.pause();
+});
+
+// *** CLOSE LINKS ****
+const navToggle = document.querySelector("[data-hamburger]");
+const navContainer = document.querySelector("[data-navbar-container]");
+const navList = document.querySelector("[data-navbar-list]");
+
+navToggle.addEventListener("click", () => {
+  const containerHeight = navContainer.getBoundingClientRect().height; // Default is 0
+  const listHeight = navList.getBoundingClientRect().height;
+  if (containerHeight === 0) {
+    navContainer.style.setProperty("--max-height", `${listHeight}px`);
+    navToggle.classList.add("active");
   } else {
-    btn.classList.remove("slide");
-    video.play();
+    navContainer.style.setProperty("--max-height", "0px");
+    navToggle.classList.remove("active");
   }
 });
 
-// preloader
-const preloader = document.querySelector(".preloader");
-
-window.addEventListener("load", function () {
-  preloader.classList.add("hide-preloader");
+// *** FIXED NAVBAR ****
+const navbar = document.getElementById("navbar");
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  const headerHeight = header.getBoundingClientRect().height;
+  if (scrollHeight > headerHeight) {
+    navbar.classList.add("navbar--fixed");
+    navbar.classList.add("navbar--fixed-moveInTopNav");
+    navbar.classList.remove("navbar-moveOutTopNav");
+  } else if (scrollHeight < headerHeight) {
+    navbar.classList.remove("navbar--fixed");
+    navbar.classList.remove("navbar--fixed-moveInTopNav");
+    navbar.classList.add("navbar-moveOutTopNav");
+  }
 });

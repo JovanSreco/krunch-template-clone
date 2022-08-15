@@ -34,8 +34,8 @@
 
   &__link {
     @include a-element-reset;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 32px;
+    height: 32px;
     background-color: $color-black-medium;
     color: $color-white;
     transition: $transition-secondary;

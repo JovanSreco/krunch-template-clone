@@ -11,35 +11,40 @@
   <body>
     <div class="grid">
       <!-- Header start -->
-      <header class="header">
+      <header class="header" id="header">
         <div class="content-wrapper">
-          <nav class="navbar">
+          <nav class="navbar" id="navbar">
             <a class="navbar__logo" href="#">
               <img src="img/logo.png" alt="logo" />
             </a>
-            <ul class="navbar__list">
-              <li class="navbar__item">
-                <a href="#" class="navbar__link active">Home</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">About</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Portfolio</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Services</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Team</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Blog</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Contact</a>
-              </li>
-            </ul>
+            <div class="hamburger" data-hamburger>
+              <span></span><span></span><span></span>
+            </div>
+            <div class="navbar__container" data-navbar-container>
+              <ul class="navbar__list" data-navbar-list>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link active">Home</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">About</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Portfolio</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Services</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Team</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Blog</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Contact</a>
+                </li>
+              </ul>
+            </div>
           </nav>
           <div class="header__text-box cmb-lg">
             <h1 class="heading-primary">Krunch | Template Clone</h1>
@@ -68,7 +73,7 @@
         </div>
         <div class="flexbox">
           <div class="flexbox__card-1-2 cmb-sm">
-            <p class="paragrah">
+            <p class="paragraph paragraph--style-normal">
               Lorem ipsum dolor sitamet, consectetur adipisicing elit, seddo
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quisus nostrud exercitation ullamco laboris
@@ -77,7 +82,7 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <p class="paragrah">
+            <p class="paragraph">
               Excepteur sint occaecat cupidatat none proident, sunt in culpa qui
               officia deserunt mollit anim id est laborum voluptate dolor.
             </p>
@@ -300,7 +305,7 @@
               <use xlink:href="./img/icons/sprite.svg#icon-display"></use>
             </svg>
             <h3 class="heading-tertiary">Web Design</h3>
-            <p class="paragraph">
+            <p class="paragraph paragraph--style-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim eros elementum tristique. Duis cursus,
               viverra ornare, eros dolor interdum nulla, commodo diam libero
@@ -312,7 +317,7 @@
               <use xlink:href="./img/icons/sprite.svg#icon-code"></use>
             </svg>
             <h3 class="heading-tertiary">Coding</h3>
-            <p class="paragraph">
+            <p class="paragraph paragraph--style-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim eros elementum tristique. Duis cursus,
               viverra ornare, eros dolor interdum nulla, commodo diam libero
@@ -324,7 +329,7 @@
               <use xlink:href="./img/icons/sprite.svg#icon-display"></use>
             </svg>
             <h3 class="heading-tertiary">Apps Design</h3>
-            <p class="paragraph">
+            <p class="paragraph paragraph--style-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim eros elementum tristique. Duis cursus,
               viverra ornare, eros dolor interdum nulla, commodo diam libero
@@ -336,7 +341,7 @@
               <use xlink:href="./img/icons/sprite.svg#icon-camera"></use>
             </svg>
             <h3 class="heading-tertiary">Photography</h3>
-            <p class="paragraph">
+            <p class="paragraph paragraph--style-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim eros elementum tristique. Duis cursus,
               viverra ornare, eros dolor interdum nulla, commodo diam libero
@@ -348,7 +353,7 @@
               <use xlink:href="./img/icons/sprite.svg#icon-magic-wand"></use>
             </svg>
             <h3 class="heading-tertiary">Branding</h3>
-            <p class="paragraph">
+            <p class="paragraph paragraph--style-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim eros elementum tristique. Duis cursus,
               viverra ornare, eros dolor interdum nulla, commodo diam libero
@@ -360,7 +365,7 @@
               <use xlink:href="./img/icons/sprite.svg#icon-world"></use>
             </svg>
             <h3 class="heading-tertiary">Hosting</h3>
-            <p class="paragraph">
+            <p class="paragraph paragraph--style-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim eros elementum tristique. Duis cursus,
               viverra ornare, eros dolor interdum nulla, commodo diam libero
@@ -413,7 +418,7 @@
               </div>
             </div>
             <h4 class="heading-quartary">Michael Thomas</h4>
-            <p class="paragrah">Graphic Designer</p>
+            <p class="paragraph paragraph--style-normal">Graphic Designer</p>
           </div>
           <div class="flexbox__card-1-4 p-sm cmb-smm">
             <div class="overlay">
@@ -445,7 +450,7 @@
               </div>
             </div>
             <h4 class="heading-quartary">Alexa Meyer</h4>
-            <p class="paragrah">Web Developer</p>
+            <p class="paragraph paragraph--style-normal">Web Developer</p>
           </div>
           <div class="flexbox__card-1-4 p-sm cmb-smm">
             <div class="overlay">
@@ -477,7 +482,7 @@
               </div>
             </div>
             <h4 class="heading-quartary">Jeffrey Steward</h4>
-            <p class="paragrah">Web Designer</p>
+            <p class="paragraph paragraph--style-normal">Web Designer</p>
           </div>
           <div class="flexbox__card-1-4 p-sm cmb-smm">
             <div class="overlay">
@@ -509,28 +514,31 @@
               </div>
             </div>
             <h4 class="heading-quartary">Bruce Moore</h4>
-            <p class="paragrah">Creative Director</p>
+            <p class="paragraph paragraph--style-normal">Creative Director</p>
           </div>
         </div>
       </section>
       <!-- Section start -->
       <section class="section section-video section--wide">
-        <video controls muted autoplay loop class="video-container">
+        <video muted loop class="video-container" data-video-container>
           <source src="./img/video.mp4" type="video/mp4" />
         </video>
         <div class="content-wrapper">
           <div class="cmb-lg p-lgt">
-            <button class="switch-btn">
-              <span>
-                play
-              </span>
-              <span>
-                pause
-              </span>
-              <span class="switch"></span>
-            </button>
+            <div class="video-controls">
+              <div class="video-controls__control active" data-video-play>
+                <svg class="video-controls__svg">
+                  <use xlink:href="./img/icons/sprite.svg#icon-play2"></use>
+                </svg>
+              </div>
+              <div class="video-controls__control" data-video-pause>
+                <svg class="video-controls__svg">
+                  <use xlink:href="./img/icons/sprite.svg#icon-pause"></use>
+                </svg>
+              </div>
+            </div>
             <p class="paragraph paragraph--video">Aenean commodo ligula eget dolor sociis natoque penatibus et magnis <br> dis parturient montes, nascetur ridiculus consectetur muse.</p>
-            <a class="btn btn--blue btn--animated">Download now</a>
+            <a class="btn btn--blue">Download now</a>
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@
   background-color: $color-black-medium;
 
   &__links {
-    padding: 1.5rem;
+    padding: $gutter-small-medium;
     @include flex-center-center;
   }
 

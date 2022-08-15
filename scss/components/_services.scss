@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   align-items: start;
+  padding: 1.5rem;
   gap: 4rem;
 
   &__svg {

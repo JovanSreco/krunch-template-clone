@@ -1,0 +1,33 @@
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-controls {
+  &__control {
+    display: none;
+    margin: 2.5rem auto;
+    cursor: pointer;
+
+    &.active {
+      display: inline-block;
+    }
+  }
+
+  &__svg {
+    fill: $color-white;
+    width: 8.2rem;
+    height: 8.2rem;
+    transition: $transition-main;
+  }
+
+  &__control:hover &__svg {
+    fill: $color-blue-light;
+  }
+}
+/* header after */

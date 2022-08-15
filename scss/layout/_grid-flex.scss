@@ -1,6 +1,7 @@
 .grid {
   display: grid;
-  grid-template-rows: 85vh;
+  min-height: 60rem;
+  grid-template-rows: minmax(70rem, 110vh);
   grid-template-columns:
     [full-start] minmax(2rem, 1fr) [center-start] repeat(
       8,
@@ -8,11 +9,20 @@
     )
     [center-end] minmax(2rem, 1fr) [full-end];
   row-gap: 4.8rem;
+
+  @include respond(tab-port) {
+    grid-template-rows: minmax(60rem, 100vh);
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 11.296875rem) [col-end]
+      )
+      [center-end] minmax(2rem, 1fr) [full-end];
+  }
 }
 
 .flexbox {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
 
   &__card-1-2 {
@@ -43,7 +53,7 @@
       flex: 1 0 50%;
     }
 
-    @include respond(phone) {
+    @include respond(phone-sm) {
       flex: 0 0 100%;
     }
   }
@@ -54,4 +64,8 @@
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 1.5rem;
+
+  @include respond(tab-port) {
+    max-width: 90.375rem;
+  }
 }
