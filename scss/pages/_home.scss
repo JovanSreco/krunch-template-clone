@@ -12,6 +12,11 @@
   }
 }
 
+.section-portfolio.section--wide {
+  margin: $section-gutter-lg 0;
+  padding: 0;
+}
+
 .section-testimonials {
   background-image: linear-gradient(
       to right bottom,

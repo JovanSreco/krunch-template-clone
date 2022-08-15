@@ -54,11 +54,60 @@ window.addEventListener("scroll", () => {
   const headerHeight = header.getBoundingClientRect().height;
   if (scrollHeight > headerHeight) {
     navbar.classList.add("navbar--fixed");
-    navbar.classList.add("navbar--fixed-moveInTopNav");
-    navbar.classList.remove("navbar-moveOutTopNav");
   } else if (scrollHeight < headerHeight) {
     navbar.classList.remove("navbar--fixed");
-    navbar.classList.remove("navbar--fixed-moveInTopNav");
-    navbar.classList.add("navbar-moveOutTopNav");
   }
 });
+
+// *** SMOTH SCROLL ***
+const navLinks = document.querySelectorAll("[data-navbar-link]");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    navContainer.style.setProperty("--max-height", "0px");
+    navToggle.classList.remove("active");
+
+    const id = e.target.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+    const navHeight = navbar.getBoundingClientRect().height;
+    const position = element.offsetTop - navHeight - 15;
+    // setActiveLink(id);
+    console.log(element.offsetTop);
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+  });
+});
+
+// *** CHANGE ACTIVE LINKS BASED ON THE SCROLL POSITION ***
+// display all items when page loads
+// let lastKnownScrollPosition = 0;
+// let ticking = false;
+// let linkIdsOffset;
+// window.addEventListener("DOMContentLoaded", function () {
+//   linkIdsOffset = [...navLinks].reduce((arr, element) => {
+//     const id = element.getAttribute("href").slice(1);
+//     const offSet = element.getBoundingClientRect().top;
+//     console.log(arr);
+//     return arr.concat({ id, offSet });
+//   }, []);
+// });
+
+// document.addEventListener("scroll", (e) => {
+//   lastKnownScrollPosition = window.scrollY;
+//   console.log(window.scrollY);
+//   if (!ticking) {
+//     window.requestAnimationFrame(() => {
+//       doSomething(lastKnownScrollPosition);
+//       ticking = false;
+//     });
+
+//     ticking = true;
+//   }
+// });
+
+// function doSomething(scrollPos) {
+  // Do something with the scroll position
+}

@@ -72,6 +72,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -842,6 +843,11 @@ body {
 .section--wide {
   grid-column: full-start/full-end;
   padding: 4.8rem 0;
+}
+
+.section-portfolio.section--wide {
+  margin: 4.8rem 0;
+  padding: 0;
 }
 
 .section-testimonials {
