@@ -13,6 +13,11 @@ html {
     // width < 900?
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
   }
+
+  @include respond(phone-sm) {
+    // width < 479?
+    font-size: 43.75%;
+  }
 }
 
 *,

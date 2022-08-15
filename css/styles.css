@@ -17,6 +17,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -24,6 +37,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
   80% {
     transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -43,6 +69,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
     transform: translate(0);
   }
 }
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -50,6 +86,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
   100% {
     opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInTopNav {
+  0% {
+    transform: translateY(-7rem);
+  }
+  100% {
     transform: translate(0);
   }
 }
@@ -74,6 +118,11 @@ html {
 @media only screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
+  }
+}
+@media only screen and (max-width: 29.9375em) {
+  html {
+    font-size: 43.75%;
   }
 }
 
@@ -116,6 +165,7 @@ body {
   font-size: 5.8rem;
   line-height: 1.5;
   color: #fff;
+  -webkit-animation: moveInLeft 1s ease-out;
   animation: moveInLeft 1s ease-out;
 }
 
@@ -145,6 +195,7 @@ body {
 }
 .paragraph--header {
   font-style: normal;
+  -webkit-animation: moveInRight 1s ease-out;
   animation: moveInRight 1s ease-out;
   color: #fff;
   font-size: 1.8rem;
@@ -198,7 +249,9 @@ body {
 .img-style {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -295,7 +348,9 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn--animated {
+  -webkit-animation: moveInBottom 0.75s ease-out 0.75s;
   animation: moveInBottom 0.75s ease-out 0.75s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .btn--blue, .btn--blue:link, .btn--blue:visited {
@@ -362,7 +417,9 @@ body {
 .overlay__img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 .overlay__background {
@@ -429,6 +486,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: -1;
 }
@@ -465,7 +523,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .swiper {
-    height: 360px;
+    height: 340px;
   }
 }
 .swiper .swiper-pagination-bullet {
@@ -547,12 +605,14 @@ body {
   display: grid;
   min-height: 60rem;
   grid-template-rows: minmax(70rem, 110vh);
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   row-gap: 4.8rem;
 }
 @media only screen and (max-width: 56.25em) {
   .grid {
     grid-template-rows: minmax(60rem, 100vh);
+    grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 11.296875rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 11.296875rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   }
 }
@@ -633,6 +693,26 @@ body {
 .header__button-group {
   margin-top: 4rem;
 }
+.header__down {
+  width: 100%;
+}
+.header__down-svg-wrapper {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+}
+.header__down-svg-wrapper:hover svg {
+  fill: #4d8cf5;
+}
+.header__down-svg-wrapper svg {
+  height: 100%;
+  width: 100%;
+  fill: #fff;
+  transition: all 300ms ease-in-out;
+}
 
 .navbar {
   position: relative;
@@ -650,6 +730,7 @@ body {
   background: #dddddd;
   background-color: rgba(51, 51, 51, 0.95);
   padding: 0 2rem;
+  -webkit-animation: moveInTopNav 0.4s ease-out;
   animation: moveInTopNav 0.4s ease-out;
 }
 @media only screen and (max-width: 56.25em) {
@@ -663,6 +744,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-animation: moveInLeft 1s ease-out;
   animation: moveInLeft 1s ease-out;
   padding: 3rem 1.5rem;
 }
@@ -696,6 +778,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  -webkit-animation: moveInRight 1s ease-out;
   animation: moveInRight 1s ease-out;
 }
 @media only screen and (max-width: 56.25em) {

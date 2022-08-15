@@ -30,4 +30,27 @@
   &__button-group {
     margin-top: $gutter-extra-large;
   }
+
+  &__down {
+    width: 100%;
+
+    &-svg-wrapper {
+      @include a-element-reset;
+      width: 42px;
+      height: 42px;
+
+      &:hover {
+        svg {
+          fill: $color-blue-light;
+        }
+      }
+
+      svg {
+        height: 100%;
+        width: 100%;
+        fill: $color-white;
+        transition: $transition-main;
+      }
+    }
+  }
 }
