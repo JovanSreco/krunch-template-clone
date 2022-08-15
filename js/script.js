@@ -50,6 +50,12 @@ navToggle.addEventListener("click", () => {
 const navbar = document.getElementById("navbar");
 const header = document.getElementById("header");
 window.addEventListener("scroll", () => {
+  setNavbarFixed(navbar, header);
+});
+
+setNavbarFixed(navbar, header);
+
+function setNavbarFixed(navbar, header) {
   const scrollHeight = window.pageYOffset;
   const headerHeight = header.getBoundingClientRect().height;
   if (scrollHeight > headerHeight) {
@@ -57,57 +63,77 @@ window.addEventListener("scroll", () => {
   } else if (scrollHeight < headerHeight) {
     navbar.classList.remove("navbar--fixed");
   }
-});
+}
 
 // *** SMOTH SCROLL ***
 const navLinks = document.querySelectorAll("[data-navbar-link]");
+const btnScrolls = document.querySelectorAll("[data-btn-scroll]");
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    navContainer.style.setProperty("--max-height", "0px");
-    navToggle.classList.remove("active");
+addSmothScrollsToElements(navLinks);
+addSmothScrollsToElements(btnScrolls);
 
-    const id = e.target.getAttribute("href").slice(1);
-    const element = document.getElementById(id);
-    const navHeight = navbar.getBoundingClientRect().height;
-    const position = element.offsetTop - navHeight - 15;
-    // setActiveLink(id);
-    console.log(element.offsetTop);
-    window.scrollTo({
-      left: 0,
-      top: position,
+function addSmothScrollsToElements(elements) {
+  elements.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      navContainer.style.setProperty("--max-height", "0px");
+      navToggle.classList.remove("active");
+
+      const id = e.target.getAttribute("href").slice(1);
+      const element = document.getElementById(id);
+      const navHeight = navbar.getBoundingClientRect().height;
+      let position = element.offsetTop - navHeight - 15;
+      if (e.target.classList.contains("btn--blue")) {
+        position += 15;
+      }
+
+      window.scrollTo({
+        left: 0,
+        top: position,
+        behaviour: "smooth",
+      });
     });
   });
+}
+
+//*** CHANGE ACTIVE LINKS BASED ON THE SCROLL POSITION ***
+const sectionElements = [...navLinks]
+  .map((element) => {
+    return element.getAttribute("href").slice(1);
+  })
+  .map((id) => {
+    return document.getElementById(id);
+  });
+let currentSectionScroll = "";
+
+window.addEventListener("scroll", () => {
+  setNavLinksOnScroll(sectionElements);
 });
 
-// *** CHANGE ACTIVE LINKS BASED ON THE SCROLL POSITION ***
-// display all items when page loads
-// let lastKnownScrollPosition = 0;
-// let ticking = false;
-// let linkIdsOffset;
-// window.addEventListener("DOMContentLoaded", function () {
-//   linkIdsOffset = [...navLinks].reduce((arr, element) => {
-//     const id = element.getAttribute("href").slice(1);
-//     const offSet = element.getBoundingClientRect().top;
-//     console.log(arr);
-//     return arr.concat({ id, offSet });
-//   }, []);
-// });
+setNavLinksOnScroll(sectionElements);
 
-// document.addEventListener("scroll", (e) => {
-//   lastKnownScrollPosition = window.scrollY;
-//   console.log(window.scrollY);
-//   if (!ticking) {
-//     window.requestAnimationFrame(() => {
-//       doSomething(lastKnownScrollPosition);
-//       ticking = false;
-//     });
+function setNavLinksOnScroll(sectionElements) {
+  sectionElements.forEach((section) => {
+    const scrollPosition = window.pageYOffset;
+    const sectionOffsetTop = section.offsetTop;
+    const sectionHeight = section.getBoundingClientRect().height;
+    if (
+      scrollPosition >= sectionOffsetTop &&
+      scrollPosition <= sectionHeight + sectionOffsetTop &&
+      currentSectionScroll !== section.getAttribute("id")
+    ) {
+      currentSectionScroll = section.getAttribute("id");
+      setNavLinksActive(currentSectionScroll);
+    }
+  });
+}
 
-//     ticking = true;
-//   }
-// });
-
-// function doSomething(scrollPos) {
-  // Do something with the scroll position
+function setNavLinksActive(sectionId) {
+  navLinks.forEach((link) => {
+    if (link.dataset.navbarLink === sectionId) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 }
