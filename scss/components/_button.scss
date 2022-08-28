@@ -8,7 +8,7 @@
     border: 1px solid $color-blue-light;
     color: $color-white;
     margin: 1rem;
-    transition: $transition-main;
+    transition: all $transition-main;
   }
 
   &:hover {
@@ -74,7 +74,6 @@
   &:visited {
     @include a-element-reset;
     color: $color-blue-light;
-    transition: $transition-main;
 
     display: flex;
     align-items: center;
@@ -85,7 +84,7 @@
     font-size: 1.3rem;
     font-weight: 600;
     text-transform: uppercase;
-    transition: $transition-main;
+    transition: color $transition-main, margin-right $transition-main;
   }
 
   // &__svg-wrapper {}
@@ -94,7 +93,7 @@
     fill: $color-blue-light;
     width: 1.5rem;
     height: 1.5rem;
-    transition: $transition-main;
+    transition: fill $transition-main;
   }
 
   &:hover &__text {

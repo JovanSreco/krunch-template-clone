@@ -38,18 +38,17 @@
       @include a-element-reset;
       width: 42px;
       height: 42px;
+      color: $color-white;
 
       &:hover {
-        svg {
-          fill: $color-blue-light;
-        }
+        color: $color-blue-light;
       }
 
       svg {
         height: 100%;
         width: 100%;
-        fill: $color-white;
-        transition: $transition-main;
+        fill: currentColor;
+        transition: color $transition-main;
       }
     }
   }

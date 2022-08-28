@@ -28,7 +28,6 @@ videoPause.addEventListener("click", () => {
   videoPlay.classList.add("active");
   video.pause();
 });
-
 // *** CLOSE LINKS ****
 const navToggle = document.querySelector("[data-hamburger]");
 const navContainer = document.querySelector("[data-navbar-container]");
@@ -82,15 +81,14 @@ function addSmothScrollsToElements(elements) {
       const id = e.target.getAttribute("href").slice(1);
       const element = document.getElementById(id);
       const navHeight = navbar.getBoundingClientRect().height;
-      let position = element.offsetTop - navHeight - 15;
+      let position = element.offsetTop - navHeight - 14;
       if (e.target.classList.contains("btn--blue")) {
-        position += 15;
+        position += 14;
       }
 
       window.scrollTo({
         left: 0,
         top: position,
-        behaviour: "smooth",
       });
     });
   });

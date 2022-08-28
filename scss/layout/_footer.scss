@@ -25,7 +25,7 @@
     width: 75%;
     height: 75%;
     fill: currentColor;
-    transition: $transition-main;
+    transition: color $transition-main;
   }
 
   &__copyright-link {
@@ -34,7 +34,7 @@
     &:visited {
       @include a-element-reset;
       color: $color-blue-light;
-      transition: $transition-main;
+      transition: color $transition-main;
     }
 
     &:hover {

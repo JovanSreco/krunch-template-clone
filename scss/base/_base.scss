@@ -16,7 +16,7 @@ html {
 
   @include respond(phone-sm) {
     // width < 479?
-    font-size: 43.75%;
+    font-size: 43.75%; // 1rem = 7px, 7/16 = 43.75%
   }
 }
 

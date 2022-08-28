@@ -384,7 +384,6 @@ body {
   display: inline-block;
   cursor: pointer;
   color: #4d8cf5;
-  transition: all 300ms ease-in-out;
   display: flex;
   align-items: center;
 }
@@ -393,13 +392,13 @@ body {
   font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
-  transition: all 300ms ease-in-out;
+  transition: color 300ms ease-in-out, margin-right 300ms ease-in-out;
 }
 .btn-readmore__svg {
   fill: #4d8cf5;
   width: 1.5rem;
   height: 1.5rem;
-  transition: all 300ms ease-in-out;
+  transition: fill 300ms ease-in-out;
 }
 .btn-readmore:hover .btn-readmore__text {
   color: #000;
@@ -430,21 +429,28 @@ body {
   background-color: rgba(77, 140, 245, 0.75);
   opacity: 0;
   z-index: 1;
-  transition: all 500ms ease-out;
+  transition: opacity 500ms ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.overlay:hover .overlay__background {
+  opacity: 1;
+}
 .overlay__content {
   opacity: 0;
   transform: translateY(3rem);
-  transition: all 500ms ease-out;
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
   transition-delay: 100ms;
   display: flex;
 }
 .overlay__content h3 {
   color: #fff;
   text-shadow: 0 1px 0 #000;
+}
+.overlay:hover .overlay__content {
+  opacity: 1;
+  transform: translateY(0);
 }
 .overlay__link {
   text-transform: uppercase;
@@ -455,29 +461,20 @@ body {
   height: 32px;
   background-color: #222;
   color: #fff;
-  transition: all 500ms ease-out;
+  transition: background-color 500ms ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.overlay__link:hover {
+  background-color: #fff;
+  color: #4d8cf5;
 }
 .overlay__svg {
   fill: currentColor;
   width: 50%;
   height: 50%;
-  transition: all 300ms ease-in-out;
-}
-.overlay:hover .overlay__background {
-  opacity: 1;
-}
-.overlay:hover .overlay__content {
-  opacity: 1;
-  transform: translateY(0);
-}
-.overlay__link:hover {
-  background-color: #fff;
-}
-.overlay__link:hover .overlay__svg {
-  fill: #4d8cf5;
+  transition: fill 300ms ease-in-out;
 }
 
 .video-container {
@@ -503,7 +500,7 @@ body {
   fill: #fff;
   width: 8.2rem;
   height: 8.2rem;
-  transition: all 300ms ease-in-out;
+  transition: fill 300ms ease-in-out;
 }
 .video-controls__control:hover .video-controls__svg {
   fill: #4d8cf5;
@@ -703,15 +700,16 @@ body {
   cursor: pointer;
   width: 42px;
   height: 42px;
+  color: #fff;
 }
-.header__down-svg-wrapper:hover svg {
-  fill: #4d8cf5;
+.header__down-svg-wrapper:hover {
+  color: #4d8cf5;
 }
 .header__down-svg-wrapper svg {
   height: 100%;
   width: 100%;
-  fill: #fff;
-  transition: all 300ms ease-in-out;
+  fill: currentColor;
+  transition: color 300ms ease-in-out;
 }
 
 .navbar {
@@ -758,7 +756,7 @@ body {
 }
 .navbar__container {
   --max-height: 0;
-  transition: all 400ms ease;
+  transition: max-height 400ms ease;
 }
 @media only screen and (max-width: 56.25em) {
   .navbar__container {
@@ -803,7 +801,7 @@ body {
   letter-spacing: initial;
   padding: 3rem 2rem;
   color: #fff;
-  transition: all 400ms ease;
+  transition: color 400ms ease;
 }
 @media only screen and (max-width: 56.25em) {
   .navbar__link, .navbar__link:link, .navbar__link:visited {
@@ -894,7 +892,7 @@ body {
   width: 75%;
   height: 75%;
   fill: currentColor;
-  transition: all 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 .footer__copyright-link, .footer__copyright-link:link, .footer__copyright-link:visited {
   text-transform: uppercase;
@@ -902,7 +900,7 @@ body {
   display: inline-block;
   cursor: pointer;
   color: #4d8cf5;
-  transition: all 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 .footer__copyright-link:hover {
   color: #000;

@@ -42,7 +42,7 @@
 
   &__container {
     --max-height: 0;
-    transition: $transition-nav;
+    transition: max-height $transition-nav;
     @include respond(tab-port) {
       position: absolute;
       top: 100%;
@@ -87,7 +87,7 @@
       letter-spacing: initial;
       padding: 3rem 2rem;
       color: $color-white;
-      transition: $transition-nav;
+      transition: color $transition-nav;
 
       @include respond(tab-port) {
         text-align: left;
@@ -116,7 +116,7 @@
   width: 52px;
   height: 52px;
   cursor: pointer;
-  transition: $transition-nav;
+  transition: all $transition-nav;
 
   @include respond(tab-port) {
     display: flex;
@@ -131,7 +131,7 @@
     height: 3px;
     background-color: $color-white;
     border-radius: 10px;
-    transition: $transition-nav;
+    transition: all $transition-nav;
 
     &:not(:last-child) {
       margin-bottom: 4px;

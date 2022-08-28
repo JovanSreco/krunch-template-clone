@@ -34,6 +34,6 @@ $box-shadow-light: 0 1rem 2rem rgba($color-black, 0.2);
 $box-shadow-medium: 0 2rem 4rem rgba($color-black, 0.26);
 
 // TRANSITIONS
-$transition-main: all 300ms ease-in-out;
-$transition-secondary: all 500ms ease-out;
-$transition-nav: all 400ms ease;
+$transition-main: 300ms ease-in-out;
+$transition-secondary: 500ms ease-out;
+$transition-nav: 400ms ease;
