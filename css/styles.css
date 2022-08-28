@@ -168,10 +168,20 @@ body {
   -webkit-animation: moveInLeft 1s ease-out;
   animation: moveInLeft 1s ease-out;
 }
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 4.5rem;
+  }
+}
 
 .heading-secondary {
   font-size: 3.2rem;
   line-height: 3.6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
 }
 
 .heading-tertiary {
@@ -601,14 +611,14 @@ body {
 .grid {
   display: grid;
   min-height: 60rem;
-  grid-template-rows: minmax(70rem, 110vh);
+  grid-template-rows: minmax(70rem, 100vh);
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   row-gap: 4.8rem;
 }
 @media only screen and (max-width: 56.25em) {
   .grid {
-    grid-template-rows: minmax(60rem, 100vh);
+    grid-template-rows: minmax(60rem, 80vh);
     grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 11.296875rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 11.296875rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
   }

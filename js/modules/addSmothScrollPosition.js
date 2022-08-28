@@ -1,4 +1,5 @@
-function addSmothScrollElements(elements, navContainer, navToggle, navbar) {
+"use strict";
+function addSmothScrollPosition(elements, navContainer, navToggle, navbar) {
   elements.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -22,4 +23,4 @@ function addSmothScrollElements(elements, navContainer, navToggle, navbar) {
   });
 }
 
-export default addSmothScrollElements;
+export default addSmothScrollPosition;
