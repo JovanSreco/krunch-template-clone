@@ -1,6 +1,7 @@
 "use strict";
 // *** SWIPER JS ***
 import swiper from "./modules/swiper.js";
+
 // *** CUSTOM MODULES ***
 import setVideoLogic from "./modules/setVideoLogic.js";
 import setCloseLinksHeight from "./modules/setCloseLinksHeight.js";
