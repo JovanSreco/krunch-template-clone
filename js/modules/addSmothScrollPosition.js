@@ -9,9 +9,9 @@ function addSmothScrollPosition(elements, navContainer, navToggle, navbar) {
       const id = e.target.getAttribute("href").slice(1);
       const element = document.getElementById(id);
       const navHeight = navbar.getBoundingClientRect().height;
-      let position = element.offsetTop - navHeight - 15;
+      let position = element.offsetTop - navHeight - 13;
       if (e.target.classList.contains("btn--blue")) {
-        position += 15;
+        position += 13;
       }
 
       window.scrollTo({
