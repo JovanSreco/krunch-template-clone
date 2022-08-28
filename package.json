@@ -1,11 +1,9 @@
 {
   "name": "starter-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Krunch Website Clone",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "author": "Jovan Sreco",
   "license": "ISC",
   "devDependencies": {
@@ -15,5 +13,10 @@
     "gulp-sass": "^5.1.0",
     "js": "^0.1.0",
     "sass": "^1.54.3"
+  },
+  "dependencies": {
+    "cssnano": "^5.1.13",
+    "gulp-postcss": "^9.0.1",
+    "gulp-terser": "^2.1.0"
   }
 }
