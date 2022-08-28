@@ -7,14 +7,12 @@ import setCloseLinksHeight from "./modules/setCloseLinksHeight.js";
 import setNavbarFixed from "./modules/setNavbarFixed.js";
 import addSmothScrollPosition from "./modules/addSmothScrollPosition.js";
 import setNavLinksOnScroll from "./modules/setNavLinksOnScroll.js";
-
 // *** VIDEO BINDINGS ***
 const video = document.querySelector("[data-video-container]");
 const videoPlay = document.querySelector("[data-video-play]");
 const videoPause = document.querySelector("[data-video-pause]");
-
+// *** VIDEO LOGIC ****
 setVideoLogic(video, videoPlay, videoPause);
-
 // *** ALL LINK RELATED BINDINGS ***
 const navToggle = document.querySelector("[data-hamburger]");
 const navContainer = document.querySelector("[data-navbar-container]");
@@ -30,25 +28,18 @@ const sectionElements = [...navLinks]
   .map((id) => {
     return document.getElementById(id);
   });
-
 // *** CLOSE LINKS ****
 setCloseLinksHeight(navToggle, navContainer, navList);
-
 // *** FIXED NAVBAR ****
 window.addEventListener("scroll", () => {
   setNavbarFixed(navbar, header);
 });
-
 setNavbarFixed(navbar, header);
-
 // *** SMOTH SCROLL ***
 addSmothScrollPosition(navLinks, navContainer, navToggle, navbar);
 addSmothScrollPosition(btnScrolls, navContainer, navToggle, navbar);
-
 //*** CHANGE ACTIVE LINKS BASED ON THE SCROLL POSITION ***
-
 window.addEventListener("scroll", () => {
   setNavLinksOnScroll(sectionElements, navLinks);
 });
-
 setNavLinksOnScroll(sectionElements, navLinks);
